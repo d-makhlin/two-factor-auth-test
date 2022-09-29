@@ -24,7 +24,9 @@ class AuthView(ModelViewSet):
         serializer.is_valid(raise_exception=True)
         validated_data = serializer.validated_data
 
-        user = authenticate(request)
+        user = authenticate(
+            username=validated_data["username"], password=validated_data["password"]
+        )
         if user is not None:
             login(request, user)
             return Response(
