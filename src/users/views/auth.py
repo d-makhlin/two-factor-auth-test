@@ -34,7 +34,10 @@ class AuthView(ModelViewSet):
             login(request, user)
             return Response(
                 status=status.HTTP_200_OK,
-                data={"user_id": user.id, "username": user.username},
+                data={
+                    "user_id": user.id,
+                    "username": user.username,
+                },
             )
         else:
             return Response(status=status.HTTP_403_FORBIDDEN)
