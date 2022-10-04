@@ -1,6 +1,6 @@
-# csv-process-test
+# two-factor-auth-test
 
-test problem with asynchronous csv files processing
+test problem with a 2fa service
 
 ## How to run this project
 
