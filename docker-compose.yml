@@ -5,6 +5,7 @@ services:
     image: postgres:14.1-alpine
     restart: always
     environment:
+      - POSTGRES_NAME=twostepauth
       - POSTGRES_USER=twostepauth
       - POSTGRES_PASSWORD=notsecretpass
       - POSTGRES_DB=twostepauth
